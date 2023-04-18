@@ -1,0 +1,51 @@
+* {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 40vw;
+  margin: 4vh auto ;
+
+}
+h2{
+  text-align: center;
+  font-size: 42px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 15vw;
+  opacity: 0.9;
+  margin: auto;
+  display: block;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
