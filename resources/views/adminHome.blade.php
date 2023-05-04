@@ -9,6 +9,11 @@
   <!-- Google Font: Source Sans Pro -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <!-- google fonts  end-->
 
   <!-- <link href="{{ asset('../css/app.css') }}" rel="stylesheet"> -->
   <link rel="stylesheet"
@@ -33,49 +38,70 @@
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
 
   <style>
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-  
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-  
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 
-                0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-  
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-  
-        .dropdown-content a:hover {
-            background-color: #f1f1f1
-        }
-  
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-  
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-    </style>
+        body {
+      font-family: 'Manrope', sans-serif;
+      background-image: url(../images/Hexagon.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      color: white;
+      height: 70px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px 8px;
+
+    }
+
+    ul>li {
+      list-style-type: none;
+      margin: 0 8px;
+    }
+
+    ul>li>a {
+      text-decoration: none;
+      color: white;
+    }
+
+    ul>li>a:hover {
+      color: goldenrod;
+    }
+
+    form {
+      /* border: 2px solid gray; */
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: -1px 5px 10px gray;
+      margin-top: 100px;
+      width: 40%;
+    }
+
+    form>input {
+      background-color: burlywood;
+
+    }
+
+    form>h1::selection {
+      background-color: burlywood;
+      color: black;
+      text-shadow: none;
+    }
+
+    form::selection {
+      background-color: burlywood;
+    }
+
+  </style>
 </head>
 
 
@@ -84,145 +110,42 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img src="../images/Site Black.png" alt="CareerFair" height="250px" width="250px">
+      <img src="../images/SiteBlack.png" alt="CareerFair" height="250px" width="250px">
+      <span class="brand-text font-weight-light">CareerFair</span>
     </div>
 
     <!-- Navbar -->
-    <
-    <!-- /.navbar -->
 
+    <!-- /.navbar -->
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-secondary elevation-4">
-      <!-- Brand Logo -->
+    <nav>
       <a href="/" class="brand-link">
-        <img src="../images/Site Black.png" alt="CareerFair" height="60px" width="100px">
-        <span class="brand-text font-weight-light">CareerFair</span>
+        <img src="../images/SiteBlack.png" alt="CareerFair" height="60px" width="100px">
       </a>
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item">
-              <a href="#" class="nav-link ">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Forms
-                </p>
-              </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/company_profile">Company Profile</a></li>
+      </ul>
+    </nav>
 
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Tables
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                  Pages
-                </p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
- 
     <!-- add company form -->
-  <form action="{{ URL::to('admin_home')}}" method="POST" class="form-group bg-secondary p-3 w-50 mx-auto mt-4" enctype="multipart/form-data">
-   @csrf
-    <h1 style="color:burlywood;">ADD COMPANY</h1>
-   
-    <input class="form-control my-3 " type="text" name="name" id="name" placeholder="Enter  Name" required>
-   
-    <input class="form-control my-3 " type="email" name="email" id="email" placeholder="Enter email" required>
-   
-    <input class="form-control my-3 " type="text" name="contact" id="contact" placeholder="Enter contact" required>
-    
-    <input class="form-control my-3 " type="text" name="address" id="address" placeholder="Enter location" required>
-    
-    <input class="form-control my-3 " type="url" name="website" id="website" placeholder="Enter website link" required>
+    <form action="{{ URL::to('admin_home')}}" method="POST" class="form-group p-3 mx-auto mt-4" enctype="multipart/form-data">
+      @csrf
+      <h1 style="color:black;text-shadow:-2px 2px 2px darkgray;padding:10px;font-family: 'Manrope', sans-serif;">ADD COMPANY</h1>
+      Name:<input class="form-control bg-dark " type="text" name="name" id="name" placeholder="Enter  Name" required>
+      Email:<input class="form-control bg-dark " type="email" name="email" id="email" placeholder="Enter email" required>
+      Contact:<input class="form-control bg-dark " type="number" name="contact" id="contact" placeholder="Enter contact" required>
+      Discription:<textarea name="discription" id="disp" class="form-control bg-dark" placeholder="Discription"></textarea>
+      Salary:<input class="form-control bg-dark " type="number" name="salary" id="salary" placeholder="Salary" required>
+      Location:<input class="form-control bg-dark " type="text" name="address" id="address" placeholder="Enter location" required>
+      Website:<input class="form-control bg-dark " type="url" name="website" id="website" placeholder="Enter website link" required>
+      Logo: <br>
+      <input type="file" name="image" id="logo" class="bg-dark">
+      <button type="submit" class="btn btn-dark d-block mt-2 px-5">Submit</button>
+    </form>
+    <!-- end form -->
 
-    LOGO: <br>
-    <input  type="file" name="image" id="logo">
-   <button type="submit" class="btn btn-success my-2 p-2">submit</button>
-     </form>
-<!-- end form -->
-
-<!-- job details form -->
-  <!-- <form action="{{ URL::to('admin/home')}}" method="POST" class="form-group bg-secondary p-3 w-50 mx-auto mt-2" enctype="multipart/form-data">
-   @csrf
-    <h1 style="color:burlywood;">COMPANY PROFILE</h1>
-   Company Name:
-    <input class="form-control mt-2 " type="text" name="name" id="name" placeholder="Enter  Name" required>
-      <br>
-   Description:
-   <textarea name="jobdesc" id="jobdesc"  class="form-control mt-2">
-   
-    </textarea>
-   Job Type: 
-   <select name="jobtype" id="jobtype" class="form-control mt-2" >
-
-     <option value="intern">
-      Intern 
-     </option>
-
-     <option value="job">
-      Job 
-     </option>
-
-   </select>
-   Salary:
-   <input class="form-control mt-2 " type="text" name="salary" id="salary" placeholder="Enter location" required>
-
-    Location:
-    <input class="form-control mt-2 " type="text" name="address" id="address" placeholder="Enter location" required>
-    Shift:
-    <select name="shift" id="shift" class="form-control mt-2 " >
-      <option value="day">
-        day
-      </option>
-      <option value="night">
-night
-    </option>
-  </select>
-  Logo: <br>
-
-
-<div class="dropdown">
-         <button class="dropbtn">
-             company logo
-         </button>
-           
-         <div class="dropdown-content">
-            <a href="#"><img src="../images/efrotech.png"width="20" height="15"></a>
-            <a href="#"><img src="../images/bootstrap-logo.png"width="20" height="15"></a>
-
-         </div>
-   </div> <br> 
-    <button type="submit" class="btn btn-success my-2 mx-auto d-block p-2">submit</button>
-     </form> -->
-   <!-- end form -->
-    
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
@@ -262,7 +185,7 @@ night
   <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../dist/js/adminlte.js"></script>
-  
+
   <!-- AdminLTE for demo purposes -->
   <!-- <script src="../dist/js/demo.js"></script>  -->
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->

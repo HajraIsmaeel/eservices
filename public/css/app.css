@@ -2,28 +2,27 @@
     margin: 0;padding: 0;box-sizing: border-box;
 }
 body{
-    background: rgb(223, 212, 212);
+    background-image: url(../images/Web-Banner.png);
+    background-size: cover;
     font-family: 'Times New Roman', Times, serif;
 }
 nav{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-
-
+    justify-content: space-around;
     top: 0;
     height: 70px;
     width: 100%;
-    background-color: black;
+    background-color: transparent;
     color: white;
+    font-family: sans-serif;
 
 }
 ul{
-    padding: 0 10px;
+    padding: 3px 10px;
     display: flex;
     margin: 0 20px;
-    justify-content: flex-end;
 }
 li{
     display: flex;
@@ -33,56 +32,93 @@ a{
     list-style-type: none;
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 12px;
 }
 .navbar-brand{
-    color: burlywood;
+    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: medium;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .logform{
+    /* border: 2px solid white; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 80%;
-    margin: 15vh auto;
+    width: 50%;
+    margin: 19vh auto;
     padding: 10px;
-    background: -webkit-linear-gradient(120deg,black,white,gray);
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow:-1px 5px 5px 9px white;
+}
+.form-top{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    transform: translateY(-120px);
+    filter: brightness(300%);
+    /* border: 2px solid white; */
+    box-shadow: -1px 5px 10px 9px  gray;
+    border-radius: 50%;
 }
 .logform>input{
-    border: 2px solid black;
-    border-radius: 8px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
     outline: none;
-    width: 50%;
-    margin: 2vh auto;
-    padding: 10px;
+    width: 100%;
+    caret-color: burlywood;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 7px auto 5px auto;
+    padding: 10px 15px;
+    background: transparent;
 }
 .logform>label{
-    width: 50%;
-    margin: 1vh auto;
+    width: 100%;
+    margin: 1vh auto 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: black;
+
 }
 .logform>h1{
+    color: black;
     text-align: center;
-    margin: 2vh auto;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow:-4px 7px 8px darkgray;
+    font-family: sans-serif;
 }
 .btn-primary{
     padding: 10px;
-    width: fit-content;
-    background-color: rgb(196, 255, 77);
+    font-size: 15px;
+    width: 20%;
+    height: 40px;
+    background-color: gray;
     margin: 2vh;
     border: none;
+    color: black;
+    font-family: sans-serif;
     border-radius: 5px;
     cursor: pointer;
-    outline: 1px solid black;
     align-self: center;
+    box-shadow: 2px 3px 5px gray;
 }
 .btn-primary:hover{
     background-color: white;
     color: black;
 }
 a:hover{
-    color: darkcyan;
+    color: goldenrod;
 }
 
 

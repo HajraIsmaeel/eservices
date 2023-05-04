@@ -32,5 +32,8 @@ Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
 Route::post('/index',[AddcompanyController::class, 'index']);
 
 // companyprofile Routes...
+Route::get('/company_profile',[AddcompanyController ::class,'create'])->name('company_profile');
+
 Route::get('/companyprofile',[CompanyprofileController::class,'company'])->name('companyprofile');
 // Route::get('/index',[AddcompanyController::class, 'index']);
+

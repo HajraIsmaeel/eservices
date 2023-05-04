@@ -8,6 +8,7 @@
     
     <form method="POST" action="{{ route('register') }}" class="logform">
         @csrf
+        <img src="../images/Web-Banner.png" alt="" class="form-top">
         <h1>{{ __('Register') }}</h1>
         <label for="name">{{ __('Name') }}</label>
         <input id="name" type="text" class="@error('name') is-invalid @enderror" name="name"

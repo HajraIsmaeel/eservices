@@ -6,6 +6,7 @@ use App\Models\addcompany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
+
 class AddcompanyController extends Controller
 {
     /**
@@ -20,6 +21,8 @@ class AddcompanyController extends Controller
         $form->name = $request->input('name');
         $form->image = $request->input('image');
         $form->address = $request->input('address');
+        $form->discription = $request->input('discription');
+        $form->salary = $request->input('salary');
         $form->contact = $request->input('contact');
         $form->website = $request->input('website');
         $form->email = $request->input('email');
@@ -28,7 +31,7 @@ class AddcompanyController extends Controller
             $file = $request->file('image');
             $extension = $file->getclientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('uploads/form/',$filename);
+            $file->move('img',$filename);
             $form->image = $filename;
         }
         else{
@@ -36,7 +39,8 @@ class AddcompanyController extends Controller
             $form->image = '';
         }
         $form->save();
-        return view('companyprofile');
+        return redirect('/company_profile');
+        // return view('companyprofile');
     }
     /**
      * Show the form for creating a new resource.
@@ -46,8 +50,8 @@ class AddcompanyController extends Controller
     public function create()
     {
         //
-        $users = addcompany::all();
-        return view("/companyprofile", compact("users"));
+        $fm = addcompany::all();
+        return view("/companyprofile", compact('fm'));
     }
 
     /**

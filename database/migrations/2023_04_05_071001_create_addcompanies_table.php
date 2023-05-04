@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->mediumText('image')->nullable();
             $table->string('address');
+            $table->string('discription');
+            $table->string('salary');
             $table->bigInteger('contact');
             $table->string('website');
             $table->string('email');     

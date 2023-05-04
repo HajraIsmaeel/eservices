@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use App\Models\addcompany;
+
+
 
 class HomeController extends Controller
 {
@@ -34,6 +37,7 @@ class HomeController extends Controller
     */
    public function adminHome()
    {
-       return view('adminHome');
+    $fm = addcompany::all();
+       return view('adminHome',compact('fm'));
    }
 }

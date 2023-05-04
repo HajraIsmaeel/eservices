@@ -15,9 +15,7 @@
 <body>
     <nav><ul>
         
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'CareerFair') }}
-        </a>
+        <a class="navbar-brand" href="{{ url('/') }}">Careerfair</a>
           
         <ul>
             @guest

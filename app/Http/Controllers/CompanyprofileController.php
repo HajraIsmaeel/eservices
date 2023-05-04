@@ -4,33 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\companyprofile;
+use App\Models\addcompany;
 use Illuminate\Support\Facades\Cache;
 
 class CompanyprofileController extends Controller
 {
     //
-
-    public function company(Request $request){
-
-        // ajax-form
-
-        if($request->ajax()){
-            $data = addcompany::where('name','Like',$request->name.'%')->get();
-            $output = '';
-            if(count($data) >0){
-                $output = '<ul class="list-group" style="display:block;position:relative;z-indez:1">';
-                foreach($data as $row){
-                    $output .='<li class="list-group-item">'.$row->name.'</li>';
-                }
-                $output .= '</ul>';
-            }
-            else{
-                $output .='<li class="list-group-item">No Data Found</li>';
-            }
-            return $output;
-        }
-        return view('companyprofile');
-    }
 
     public function store(Request $request)
     {
@@ -57,7 +36,8 @@ class CompanyprofileController extends Controller
             $company->Logo = '';
         }
         $company->save();
-        return view('companyprofile');
+        $fm = addcompany::all();
+        return view('companyprofile',compact('fm'));
     }
 
 }

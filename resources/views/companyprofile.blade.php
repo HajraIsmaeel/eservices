@@ -5,10 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CareerFair | AdminDashboard</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <!-- google fonts  end-->
 
   <!-- Google Font: Source Sans Pro -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
   <!-- <link href="{{ asset('../css/app.css') }}" rel="stylesheet"> -->
   <link rel="stylesheet"
@@ -33,203 +40,198 @@
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
 
   <style>
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-  
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-  
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 
-                0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-  
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-  
-        .dropdown-content a:hover {
-            background-color: #f1f1f1
-        }
-  
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-  
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-    </style>
-</head>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-image: url(../images/Hexagon.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      color: white;
+      height: 70px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px 8px;
+
+    }
+
+    ul>li {
+      list-style-type: none;
+      margin: 0 8px;
+    }
+
+    ul>li>a {
+      text-decoration: none;
+      color: white;
+    }
+
+    ul>li>a:hover {
+      color: goldenrod;
+    }
+
+    form {
+      /* border: 2px solid gray; */
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: -1px 5px 10px gray;
+      margin-top: 100px;
+      width: 40%;
+    }
+
+    form>input {
+      background-color: burlywood;
+
+    }
+
+    form>h1::selection {
+      background-color: burlywood;
+      color: black;
+      text-shadow: none;
+    }
+
+    form::selection {
+      background-color: burlywood;
+    }
+
+  </style>
+</head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img src="../images/Site Black.png" alt="CareerFair" height="250px" width="250px">
+      <img src="../images/SiteBlack.png" alt="CareerFair" height="250px" width="250px">
     </div>
 
     <!-- Navbar -->
-    <
+
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-secondary elevation-4">
-      <!-- Brand Logo -->
-      <a href="/" class="brand-link">
-        <img src="../images/Site Black.png" alt="CareerFair" height="60px" width="100px">
-        <span class="brand-text font-weight-light">CareerFair</span>
+    <nav class="container-fluid">
+    <a href="/" class="brand-link">
+        <img src="../images/SiteBlack.png" alt="CareerFair" height="60px" width="100px">
       </a>
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item">
-              <a href="#" class="nav-link ">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Forms
-                </p>
-              </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/admin_home">Add Company</a></li>
+      </ul>
+    </nav>
 
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Tables
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                  Pages
-                </p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
- 
-<!-- job details form -->
-  <form action="{{ URL::to('/companyprofile')}}" method="POST" class="form-group bg-secondary p-3 w-50 mx-auto mt-2" enctype="multipart/form-data">
-   @csrf
-    <h1 style="color:burlywood;">COMPANY PROFILE</h1>
-   Company Name:
-    <input class="form-control mt-2 " type="text" name="name" id="name" placeholder="Enter company" required>
+    <!-- job details form -->
+    <form action="{{ URL::to('/companyprofile')}}" method="POST" class="form-group  p-3 mx-auto mt-2 mb-0" enctype="multipart/form-data">
+      @csrf
+      <h1 style="color:black;text-shadow:-2px 2px 2px darkgray;padding:10px;font-family: 'Manrope', sans-serif;">COMPANY PROFILE</h1>
+      <select name="name" id="name" class="form-control bg-dark">
+        @foreach($fm as $f)
+        <option value="">{{$f->name}}</option>
+        @endforeach
+      </select><br>
+      
+      <!-- <input class="form-control mt-2 " type="text" name="name" id="name" placeholder="Enter company" required> -->
+      <select name="jobdesc" id="jobdesc" class="form-control bg-dark">
+        @foreach($fm as $f)
+        <option value="">{{ $f->discription }}</option>
+        @endforeach
+      </select><br>
+<select id="result" name="result" class="form-control bg-dark">
+  <option value="job">Job</option>
+  <option value="intern">Intern</option>
+</select>
+<div id="job" style="display:none">
+  <div>
+  <label>
+    <input type="checkbox" value="Paid" name="postiveDrug" />Paid</label>
+  <label>
+    <input type="checkbox" value="Unpaid" name="postiveDrug" />Unpaid</label>
+</div>
+</div><br>
+<select name="salary" id="salary" class="form-control bg-dark">
+        @foreach($fm as $f)
+        <option value="">{{ $f->salary }}</option>
+        @endforeach
+      </select><br>
+      <select name="address" id="address" class="form-control bg-dark">
+        @foreach($fm as $f)
+        <option value="">{{ $f->address }}</option>
+        @endforeach
+      </select><br>
+      <select name="shift" id="shift" class="form-control bg-dark">
+        <option value="day">day</option>
+        <option value="night">night</option>
+      </select>
       <br>
-   Description:
-   <textarea name="jobdesc" id="jobdesc"  class="form-control mt-2">
-   
-    </textarea>
-   Job Type: 
-   <select name="jobtype" id="jobtype" class="form-control mt-2" >
+      <div class="d-flex">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logo</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          @foreach($fm as $f)
+          <a href="#"><img src="./img/{{$f->image}}" alt="" height="50px" width="50px"></a>
+          @endforeach
+        </div>
+      </div>
 
-     <option value="intern">
-      Intern 
-     </option>
+      <button type="submit" class="btn btn-dark  mx-auto d-block px-5">Submit</button>
+    </form>
+    <!-- end form -->
 
-     <option value="job">
-      Job 
-     </option>
-
-   </select>
-   Salary:
-   <input class="form-control mt-2 " type="text" name="salary" id="salary" placeholder="Enter location" required>
-
-    Location:
-    <input class="form-control mt-2 " type="text" name="address" id="address" placeholder="Enter location" required>
-    Shift:
-    <select name="shift" id="shift" class="form-control mt-2 " >
-      <option value="day">
-        day
-      </option>
-      <option value="night">
-night
-    </option>
-  </select>
-  Logo: <br>
-
-   <div class="dropdown show">
-  <a name="logo" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Logo
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#"><input  type="file" name="image" id="logo"></a>
-  </div>
-</div> <br> 
-    <button type="submit" class="btn btn-success my-2 mx-auto d-block p-2">submit</button>
-     </form>
-   <!-- end form -->
-
-   <table class="table table-hover">
-    <tr>
-      <td>company name</td>
-      <td>location</td>
-      <td>logo</td>
-    </tr>
-
-    @foreach($users as $u)
-    <tr>
-      <td>{{$u->company_name}}</td>
-      <td>{{$u->Location}}</td>
-      <td>{{$u->Logo}}</td>
-    </tr>
-    @endforeach
-   </table>
-
-     <!-- Control Sidebar -->
-     <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
     </aside>
     <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
 
+  <script>
+
+$("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  if ($box.is(":checked")) {
+    // the name of the box is retrieved using the .attr() method
+    // as it is assumed and expected to be immutable
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    // the checked state of the group/box on the other hand will change
+    // and the current value is retrieved using .prop() method
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+});
+
+
+    $('#result').on('change', function() {
+  $('#job').css('display', 'none');
+  if ( $(this).val() === 'intern' ) {
+    $('#job').css('display', 'block');
+    $('#salary').css('display', 'none');
+  }
+  if ( $(this).val() === 'job' ) {
+    $('#job').css('display', 'none');
+    $('#salary').css('display', 'block');
+  }
+});
+ </script>
   <!-- jQuery -->
   <script src="../plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
   <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
-    $.widget.bridge('uibutton', $.ui.button)
+  $.widget.bridge('uibutton', $.ui.button)
   </script>
   <!-- Bootstrap 4 -->
   <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -253,14 +255,56 @@ night
   <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../dist/js/adminlte.js"></script>
-  
+  <!-- <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script> -->
+
+  <!-- <script>
+      $(document).ready(function(){
+        $("#name").on('keyup',function(){
+          var value = $(this).val();
+          $.ajax({
+            url:"{{ route('companyprofile') }}",
+            type:"GET",
+            data:{'name':value},
+            success:function(data){
+              $("#company_list").html(data);
+            }
+          });
+        });
+
+        $(document).on('click','li',function(){
+          var value = $(this).text();
+          $("#name").val(value);
+          $("#company_list").html("");
+        });
+
+      });
+    </script> -->
+
   <!-- AdminLTE for demo purposes -->
   <!-- <script src="../dist/js/demo.js"></script>  -->
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <!-- <script src="../dist/js/pages/dashboard.js"></script> -->
 </body>
 
+
 </html>
-
-
- 

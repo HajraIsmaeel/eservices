@@ -9,6 +9,7 @@
 
     <form method="POST" action="{{ route('login')}}" class="logform">
         @csrf
+        <img src="../images/Web-Banner.png" alt="" class="form-top">
         <h1>{{ __('Login') }}</h1>
         <label for="email" class="emaillabel">{{ __('Email Address') }}</label>
         <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email"
