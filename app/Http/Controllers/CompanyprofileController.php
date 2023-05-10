@@ -37,7 +37,11 @@ class CompanyprofileController extends Controller
         }
         $company->save();
         $fm = addcompany::all();
-        return view('companyprofile',compact('fm'));
     }
+     public function getcompanyname(Request $req){
+            $companyname = $req->companyname;
+            $data = addcompany::where('name', $companyname)->get();
+            return response()->json($data);
+     }
 
 }

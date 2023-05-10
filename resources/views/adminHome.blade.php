@@ -103,8 +103,6 @@
 
   </style>
 </head>
-
-
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
 
@@ -115,10 +113,7 @@
     </div>
 
     <!-- Navbar -->
-
-    <!-- /.navbar -->
-    <!-- Main Sidebar Container -->
-    <nav>
+    <nav class="contanier-fluid">
       <a href="/" class="brand-link">
         <img src="../images/SiteBlack.png" alt="CareerFair" height="60px" width="100px">
       </a>
@@ -128,6 +123,8 @@
         <li><a href="/company_profile">Company Profile</a></li>
       </ul>
     </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
 
     <!-- add company form -->
     <form action="{{ URL::to('admin_home')}}" method="POST" class="form-group p-3 mx-auto mt-4" enctype="multipart/form-data">
@@ -145,8 +142,6 @@
       <button type="submit" class="btn btn-dark d-block mt-2 px-5">Submit</button>
     </form>
     <!-- end form -->
-
-
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -191,5 +186,4 @@
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <!-- <script src="../dist/js/pages/dashboard.js"></script> -->
 </body>
-
 </html>

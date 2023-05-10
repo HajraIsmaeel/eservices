@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,11 +115,8 @@
 
     <!-- Navbar -->
 
-    <!-- /.navbar -->
-
-    <!-- Main Sidebar Container -->
-    <nav class="container-fluid">
-    <a href="/" class="brand-link">
+    <nav class="contanier-fluid">
+      <a href="/" class="brand-link">
         <img src="../images/SiteBlack.png" alt="CareerFair" height="60px" width="100px">
       </a>
 
@@ -129,56 +125,50 @@
         <li><a href="/admin_home">Add Company</a></li>
       </ul>
     </nav>
+    
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
 
     <!-- job details form -->
-    <form action="{{ URL::to('/companyprofile')}}" method="POST" class="form-group  p-3 mx-auto mt-2 mb-0" enctype="multipart/form-data">
+    <form action="{{ URL::to('/companyprofile')}}" id="formdata" method="POST" class="form-group  p-3 mx-auto mt-2 mb-0" enctype="multipart/form-data">
       @csrf
       <h1 style="color:black;text-shadow:-2px 2px 2px darkgray;padding:10px;font-family: 'Manrope', sans-serif;">COMPANY PROFILE</h1>
-      <select name="name" id="name" class="form-control bg-dark">
+      <select name="companyname" id="companyname" class="form-control bg-dark">
         @foreach($fm as $f)
-        <option value="">{{$f->name}}</option>
+        <option value="{{$f->name}}">{{$f->name}}</option>
         @endforeach
       </select><br>
       
       <!-- <input class="form-control mt-2 " type="text" name="name" id="name" placeholder="Enter company" required> -->
       <select name="jobdesc" id="jobdesc" class="form-control bg-dark">
-        @foreach($fm as $f)
-        <option value="">{{ $f->discription }}</option>
-        @endforeach
+        
       </select><br>
 <select id="result" name="result" class="form-control bg-dark">
-  <option value="job">Job</option>
-  <option value="intern">Intern</option>
+  
 </select>
 <div id="job" style="display:none">
   <div>
   <label>
-    <input type="checkbox" value="Paid" name="postiveDrug" />Paid</label>
+    <input type="checkbox" value="Paid" name="postiveDrug" id="paid" onclick="checkpaid(this.checked)" />Paid</label><br>
   <label>
-    <input type="checkbox" value="Unpaid" name="postiveDrug" />Unpaid</label>
+    <input type="checkbox" value="Unpaid" name="postiveDrug" id="unpaid" onclick="checkunpaid(this.checked)" />Unpaid</label>
 </div>
 </div><br>
 <select name="salary" id="salary" class="form-control bg-dark">
-        @foreach($fm as $f)
-        <option value="">{{ $f->salary }}</option>
-        @endforeach
+       
       </select><br>
       <select name="address" id="address" class="form-control bg-dark">
-        @foreach($fm as $f)
-        <option value="">{{ $f->address }}</option>
-        @endforeach
+        
       </select><br>
       <select name="shift" id="shift" class="form-control bg-dark">
-        <option value="day">day</option>
-        <option value="night">night</option>
+        
       </select>
       <br>
       <div class="d-flex">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logo</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          @foreach($fm as $f)
-          <a href="#"><img src="./img/{{$f->image}}" alt="" height="50px" width="50px"></a>
-          @endforeach
+          
         </div>
       </div>
 
@@ -196,6 +186,7 @@
 
   <script>
 
+// paid unpaid
 $("input:checkbox").on('click', function() {
   // in the handler, 'this' refers to the box clicked on
   var $box = $(this);
@@ -212,6 +203,22 @@ $("input:checkbox").on('click', function() {
   }
 });
 
+// paid unpaid select
+function checkpaid(selected){
+  if(selected){
+    document.getElementById("salary").style.display = "";
+  }
+  else{
+    document.getElementById("salary").style.display = "none";  }
+}
+
+function checkunpaid(selected){
+  if(selected){
+    document.getElementById("salary").style.display = "none";
+  }
+  else{
+    document.getElementById("salary").style.display = "";  }
+}
 
     $('#result').on('change', function() {
   $('#job').css('display', 'none');
@@ -255,56 +262,45 @@ $("input:checkbox").on('click', function() {
   <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../dist/js/adminlte.js"></script>
-  <!-- <script>
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script> -->
-
-  <!-- <script>
-      $(document).ready(function(){
-        $("#name").on('keyup',function(){
-          var value = $(this).val();
-          $.ajax({
-            url:"{{ route('companyprofile') }}",
-            type:"GET",
-            data:{'name':value},
-            success:function(data){
-              $("#company_list").html(data);
-            }
-          });
-        });
-
-        $(document).on('click','li',function(){
-          var value = $(this).text();
-          $("#name").val(value);
-          $("#company_list").html("");
-        });
-
-      });
-    </script> -->
 
   <!-- AdminLTE for demo purposes -->
   <!-- <script src="../dist/js/demo.js"></script>  -->
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <!-- <script src="../dist/js/pages/dashboard.js"></script> -->
 </body>
-
-
 </html>
+<script>
+  let companyname= $('#companyname');
+  let Description= $('#jobdesc');
+  let salary= $('#salary');
+  let address= $('#address');
+  let shift= $('#shift');
+  let dropdown= $('.dropdown-menu');
+  let route = "{{route('get.company')}}";
+  let formdata = $('#formdata');
+  
+  $(companyname).on('change',function(e){
+    $.ajax({
+      url:route,
+      type:'get',
+      data:formdata.serialize(),
+      success:function(result){
+        $(result).each(function(index,value){
+          Description.html(`<option value="${value.discription}">${value.discription}</option>`);
+          salary.html(`<option value="${value.salary}">${value.salary}</option>`);
+          address.html(`<option value="${value.address}">${value.address}</option>`);
+          dropdown.html(`<img src="../img/${value.image}">`);
+
+          
+
+          
+
+
+
+          
+        })
+      }
+    })
+  })
+</script>

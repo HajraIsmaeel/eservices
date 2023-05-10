@@ -36,7 +36,6 @@ class LoginController extends Controller
     public function login(Request $request)
     {   
         $input = $request->all();
-   
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:8|max:16',
@@ -47,6 +46,7 @@ class LoginController extends Controller
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('admin.home');
             }else{
+
                 return redirect()->route('home');
             }
         }else{

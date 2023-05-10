@@ -52,6 +52,15 @@ class AddcompanyController extends Controller
         //
         $fm = addcompany::all();
         return view("/companyprofile", compact('fm'));
+    // if(session('sessionemail'))
+    // {
+
+        
+    // }
+    // else{
+    //     return redirect('login')
+    //         ->with('message','Email-Address And Password Are Wrong.');
+    // }
     }
 
     /**

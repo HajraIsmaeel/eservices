@@ -53,7 +53,7 @@ a{
     padding: 10px;
     background-color: white;
     border-radius: 8px;
-    box-shadow:-1px 5px 5px 9px white;
+    box-shadow:-1px 5px 5px white;
 }
 .form-top{
     width: 130px;
@@ -61,8 +61,8 @@ a{
     position: absolute;
     transform: translateY(-120px);
     filter: brightness(300%);
-    /* border: 2px solid white; */
-    box-shadow: -1px 5px 10px 9px  gray;
+    border: 2px solid gray;
+    box-shadow: -1px 5px 10px  gray;
     border-radius: 50%;
 }
 .logform>input{

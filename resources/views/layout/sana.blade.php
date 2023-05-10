@@ -84,46 +84,6 @@
 </head>
 
 <body>
-
-  <!-- navbar start -->
-
-  <!-- <nav class="navbar 
-      navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-5">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#meetcompanies">Compains</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Organizer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume">Resum simples</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Get prepared</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">register</a>
-        </li>      
-      </ul>
-    </div>
-  </div>
-</nav>  -->
   <nav>
     <ul>
       <li><a href="/"> Home</a></li>
@@ -136,141 +96,91 @@
       <li><a href="/register"> register</a></li>
     </ul>
   </nav>
-  <!-- <nav class="navbar">
-  <div class="container">
 
-    <div class="navbar-header">
-      <button class="navbar-toggler" data-toggle="open-navbar1">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a href="#">
-        <h4>Awesome<span>logo</span></h4>
-      </a>
-    </div>
 
-    <div class="navbar-menu" id="open-navbar1">
-      <ul class="navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="navbar-dropdown">
-          <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
-            Categories <i class="fa fa-angle-down"></i>
-          </a>
-          <ul class="dropdown" id="my-dropdown-id">
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="separator"></li>
-            <li><a href="#">Seprated link</a></li>
-            <li class="separator"></li>
-            <li><a href="#">One more seprated link.</a></li>
-          </ul>
-        </li>
-        <li class="navbar-dropdown">
-          <a href="#" class="dropdown-toggler" data-dropdown="blog">
-            Blog <i class="fa fa-angle-down"></i>
-          </a>
-          <ul class="dropdown" id="blog">
-            <li><a href="#">Some category</a></li>
-            <li><a href="#">Some another category</a></li>
-            <li class="separator"></li>
-            <li><a href="#">Seprated link</a></li>
-            <li class="separator"></li>
-            <li><a href="#">One more seprated link.</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Signin</a></li>
-      </ul>
+  <!-- slider start  -->
+  <center>
+    <div class="crsl">
+      <img src="../images/sina.png" class="carimg" alt="">
+      <img src="../images/ibex-logo.svg" class="carimg" alt="">
+      <img src="../images/viable_tree.png" class="carimg" alt="">
+      <img src="../images/efrotech.png" class="carimg" alt="">
+      <img src="../images/LOGO - Squarera May.png" class="carimg" alt="">
+      <img src="../images/sina.png" class="carimg" alt="">
+      <img src="../images/D-SMART SMALL - Shehzad Salim.png" class="carimg" alt="">
+      <img src="../images/Vector-Smart-Object - shahrukh soomro.png" class="carimg" alt="">
+      <img src="../images/OS-logo-2022 - HAMZA IMRAN.png" class="carimg" alt="">
+      <img src="../images/Picture1-removebg-preview - Ecommerce inside.png" class="carimg" alt="" style="background-color:gray;">
+      <img src="../images/WhatsApp Image 2023-01-19 at 6.46.33 PM.jpeg" class="carimg" alt="">
+      <img src="../images/Hammi Systems logo - Kashaf Akram.png" class="carimg" alt="">
+      <img src="../images/Human Capital - Human Capital Team.jpg" class="carimg" alt="">
+      <img src="../images/pluton.png" class="carimg" alt="">
+      <img src="../images/allied2.jpg" class="carimg" alt="">
+      <img src="../images/241380990_2472535502880166_1709658011320393623_n - Neha Khan.jpg" class="carimg" alt="">
     </div>
-  </div>
-</nav> -->
-  <!-- navbar end -->
-  <!-- banner start  -->
-  <div class="hero">
-    <img src="./images/web_baner.jpeg" alt="">
-    <div class="container-fluid sana">
-      <button class="btn btn-info text-center d-flex-auto btn-1">Make your Attendance</button>
-      <div class="row">
-        <button class="item1 col-lg col-md col-sm ">Front end</button>
-        <button class="item1 col-lg col-md col-sm ">React</button>
-        <button class="item1 col-lg col-md col-sm ">Seo</button>
-        <button style="font-size: 15px;" class="item1 col-lg col-md col-sm ">Data analyst</button>
-        <button class="item1 col-lg col-md col-sm ">Android</button>
-        <button class="item1 col-lg col-md col-sm ">Flutter</button>
-        <button class="item1 col-lg col-md col-sm ">Wordpress</button>
+  </center>
+  <!-- slider end -->
+  <!-- slider cards start -->
+  <h1 class="text-center mt-5" style="font-weight:bold;">Faculty</h1><br>
+  <center>
+    <div class="slider owl-carousel">
+      <div class="card">
+        <div class="img"><img src="../images/Sir Mouaviz.png" alt=""></div>
+        <div class="content">
+          <div class="title">Mr. Mirza Mouaviz</div>
+          <div class="sub-title">Frontend</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
       </div>
-      <div class="row">
-        <button class="item1 col-lg col-md col-sm ">Graphics designing</button>
-        <button class="item1 col-lg col-md col-sm ">Digital markiting</button>
-        <button class="item1 col-lg col-md col-sm ">Content Writer</button>
-        <button class="item1 col-lg col-md col-sm ">Backend(php larvel)</button>
+
+      <div class="card">
+        <div class="img"><img src="../images/Sir Sadam.png" alt=""></div>
+        <div class="content">
+          <div class="title">Mr. Sadam Hussain</div>
+          <div class="sub-title">.NET</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- banner end -->
-  <!-- about start -->
-  <section>
-    <div class="container mt-5" id="about">
-      <h1 class="text-center mt-5">About this Event</h1>
-      <p class="mt-5" style="font-size: 17px; text-transform:capitalize">Get Hired !! Aptech Learning,Garden-SITE-Orangi
-        campuses are hosting yet another career fair 2023, bigger and better than before,The event is ideally aimed as a
-        networking platform and to facilitate matching our talented professionals to best suited job opportunities. Gear
-        up your tech skills, Mark your calendars for an exciting event.</p>
-    </div>
 
-  </section>
-  <!-- second start -->
-  <section>
-    <h1 class="text-center mt-5" id="meetcompanies">Meet The Companies</h1>
-    <div class="owl-carousel owl-theme mt-5">
+      <div class="card">
+        <div class="img"><img src="../images/Sir Zaman.png" alt=""></div>
+        <div class="content">
+          <div class="title">Mr. Zaman</div>
+          <div class="sub-title">SEO / Digital Marketing</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
+      </div>
 
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/ibex-logo.svg" alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/allied2.jpg" alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/efrotech.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/pluton.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Hammi Systems logo - Kashaf Akram.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Human Capital - Human Capital Team.jpg " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/graphic.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/D-SMART SMALL - Shehzad Salim.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Picture1-removebg-preview - Ecommerce inside.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/LOGO - Squarera May.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/241380990_2472535502880166_1709658011320393623_n - Neha Khan.jpg " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/WhatsApp Image 2023-01-19 at 6.46.33 PM.jpeg " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/pluton.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/OS-logo-2022 - HAMZA IMRAN.png" alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/sina.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/D-SMART SMALL - Shehzad Salim.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Vector-Smart-Object - shahrukh soomro.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/viable_tree.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Site Black.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/Picture1-removebg-preview - Ecommerce inside.png " alt=""></div>
-      <div style=" display: flex; align-items: center; justify-content: center;" class="item2"><img
-          src="./images/graphic.png " alt=""></div>
+      <div class="card">
+        <div class="img"><img src="../images/Ms Esha.png" alt=""></div>
+        <div class="content">
+          <div class="title">Ms. Esha Eman</div>
+          <div class="sub-title">Frontend</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img"><img src="../images/Ms Neha.png" alt=""></div>
+        <div class="content">
+          <div class="title">Ms. Niha Kishan</div>
+          <div class="sub-title">Wordpress</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img"><img src="../images/Ms Tazeen.png" alt=""></div>
+        <div class="content">
+          <div class="title">Ms. Tazeen Anis</div>
+          <div class="sub-title">PHP / Laravel</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem odit hic quae.</p>
+        </div>
+      </div>
+
     </div>
-  </section>
-  <!-- section end  -->
+  </center>
+  <!-- slider cards end -->
   <!-- resume section  start  -->
   <section>
     <h1 class="text-center mt-5" id="resume">resume Samples</h1>
@@ -362,9 +272,6 @@
 
     </div>
   </footer>
-
-
-
   </section>
   <script src="./jquery-3.6.4.min.js"></script>
   <script src="assets/owl-carousel/owl.carousel.js"></script>
@@ -377,18 +284,12 @@
 
   <script>
 
-
-// $(document).ready(function(){
-//     var owl = $(".owl-carousel");
-//     owl.owlCarousel({
-//         items: 4,
-//         autoplay: true,
-//         autoPlaySpeed: 100,
-//         autoPlayTimeout: 500,
-//         autoplayHoverPause: false
-//     });
-// });
-
+    $('.slider').owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 2000, //2000ms = 2s;
+      autoplayHoverPause: true,
+    });
   </script>
 </body>
 
