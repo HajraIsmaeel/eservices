@@ -1,3 +1,13 @@
+@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
 * {
   margin: 0%;
   padding: 0%;
@@ -7,6 +17,7 @@
 html{
   scroll-behavior: smooth;
   transition: 1s ease-in;
+  height: 100%
 }
 body{
   overflow-x: hidden;
@@ -209,6 +220,219 @@ border: 1px solid aqua !important;
 .item2 {
   width: 100px;
 }
+
+
+/* CV creator */
+/* Utils */
+
+.clear {
+	clear: both;
+}
+.purple {
+	color: #837c9a;
+}
+
+.block {
+	margin: 25px 30px;
+}
+	.block h1 {
+		margin-left: -5px;
+		font-weight: 200;
+	}
+
+.last.block {
+	margin-bottom: 110px;
+}
+
+.horizontal_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal_list li {
+		float: left;
+	}
+	.horizontal_list li:before {
+		content: none;
+	}
+	.horizontal_list li { 
+		padding-left: 0; 
+		text-indent: 0;
+	}
+
+.horizontal_line{
+	margin: 34px 0 0 30px;
+	height: 26px;
+	position: relative;	
+}
+	.line_left,
+	.line_right{
+		border-top: 1px solid #434247;
+		width: 305px;
+		margin-top: 13px;
+	}
+	.line_left{
+		float: left;
+	}
+	.line_right {
+		float: right;
+	}
+	.left_circle, 
+	.central_circle, 
+	.right_circle {
+		background: rgb(69,68,73);
+		background: rgba(255,255,255, 0.15);
+		position: absolute;
+		border-radius: 50px;
+	}
+	.left_circle, 
+	.right_circle {
+		width: 13px;
+		height: 13px;
+		top: 7px;
+	}
+	.left_circle{
+		left: 314px;
+	}
+	.central_circle{
+		width: 26px;
+		height: 26px;		
+		top: 0px;
+		left: 322px;
+	}
+	.right_circle{
+		left: 343px;
+	}
+
+blockquote {
+	font-style: italic;
+	margin: 25px 0;
+	padding-left: 20px;
+	border-left: 2px solid #48DA9B;
+}
+	
+
+/* Containers size */
+
+#main_container {
+	width: 960px;
+	margin: 0 auto;
+}
+	#header {
+		height: 130px;
+		border-bottom: 1px solid #403F44;
+	}
+		.header_menu_container {
+			height: 130px;
+			width: 699px;
+			float: right;
+		}
+			.header_menu_container a {
+				font-family: 'Lato', Helvetica, sans-serif;
+			}
+	#left_col {
+		width: 260px;
+		float: left;
+	}
+	#content_container {
+		width: 699px;
+		border-left: 1px solid #403F44;
+		float: left;
+	}
+
+/* HEADER */
+
+.download_print_buttons {
+	width: 325px;
+	height: 45px;
+	float: right;
+}
+	.download_print_buttons a {
+		text-decoration: none;
+		font-size: 12px;
+		font-family: 'Lato', Helvetica, sans-serif;
+		font-style: italic;
+		line-height: 45px;
+		padding: 16px 17px;
+		background: #353638;
+    color: white;
+	}
+		.download_print_buttons a:hover {
+			background: #020609;
+      color: white;
+		}
+		.download_print_buttons .icon {
+			color: #02070a;
+			padding-right: 6px;
+			font-style: normal;
+			font-size: 18px;
+		}
+		.icon-angle-double-right {
+			position: relative;
+			top: 2px;
+		}
+			.download_print_buttons a:hover .icon {
+				color: #e4e3e8;
+			}
+			
+.header_menu {
+	width: 699px;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+	.header_menu a{
+		text-decoration: none;
+		padding: 0 20px;
+		border-left: 1px solid #e4e3e8;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.header_menu a.no_border{
+		border-left: none;
+	}
+		.header_menu a:hover {
+			color: #837c9a;
+		}
+		
+/* LEFT NAV */
+
+#left_nav h2 {
+	margin: 0;
+	font-size: 24px;
+}
+
+.profile_frame{
+	width: 230px;
+	height: 260px;
+	background: white;
+	border: 1px solid #403F44;
+	margin-top: 30px;
+}
+
+.contact_details_content {
+	margin-top: 25px;
+  margin-right: 20px;
+}
+
+
+/* Profile Content */
+
+.philosophy_content {
+	margin-top: 20px;
+}
+	.philosophy_content p {
+		margin: 0;
+		width: 370px;
+		float: left;
+	}
+	.philosophy_content ul {
+		float: left;
+		padding-left: 40px;
+	}
+
+
+
+
 /* 
 #footer {
   height: 200px;

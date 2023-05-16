@@ -144,7 +144,7 @@
       <select name="jobdesc" id="jobdesc" class="form-control bg-dark">
         
       </select><br>
-<select id="result" name="result" class="form-control bg-dark">
+<select id="resultp" name="resultp" class="form-control bg-dark">
   
 </select>
 <div id="job" style="display:none">
@@ -274,6 +274,7 @@ function checkunpaid(selected){
   let companyname= $('#companyname');
   let Description= $('#jobdesc');
   let salary= $('#salary');
+  let result = $('#resultp');
   let address= $('#address');
   let shift= $('#shift');
   let dropdown= $('.dropdown-menu');
@@ -290,15 +291,10 @@ function checkunpaid(selected){
           Description.html(`<option value="${value.discription}">${value.discription}</option>`);
           salary.html(`<option value="${value.salary}">${value.salary}</option>`);
           address.html(`<option value="${value.address}">${value.address}</option>`);
+          result.html(`<option value="${value.result}">${value.result}</option>`);
+          shift.html(`<option value="${value.shift}">${value.shift}</option>`);
           dropdown.html(`<img src="../img/${value.image}">`);
-
-          
-
-          
-
-
-
-          
+        
         })
       }
     })

@@ -22,6 +22,8 @@ class AddcompanyController extends Controller
         $form->image = $request->input('image');
         $form->address = $request->input('address');
         $form->discription = $request->input('discription');
+        $form->shift = $request->input('shift');
+        $form->result = $request->input('result');
         $form->salary = $request->input('salary');
         $form->contact = $request->input('contact');
         $form->website = $request->input('website');

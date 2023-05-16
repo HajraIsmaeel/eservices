@@ -10,5 +10,5 @@ class addcompany extends Model
 {
     use HasFactory;
     protected $table = 'addcompanies';
-    protected $fillable = ['name','email','contact','discription','salary','address','website','image'];
+    protected $fillable = ['name','email','contact','discription','salary','shift','result','address','website','image'];
 }

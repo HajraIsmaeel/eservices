@@ -134,7 +134,9 @@
       Email:<input class="form-control bg-dark " type="email" name="email" id="email" placeholder="Enter email" required>
       Contact:<input class="form-control bg-dark " type="number" name="contact" id="contact" placeholder="Enter contact" required>
       Discription:<textarea name="discription" id="disp" class="form-control bg-dark" placeholder="Discription"></textarea>
-      Salary:<input class="form-control bg-dark " type="number" name="salary" id="salary" placeholder="Salary" required>
+      Jobtype:<input type="text" name="result" id="result" class="form-control bg-dark">
+      Salary:<input class="form-control bg-dark " type="number" name="salary" id="salary" placeholder="Salary">
+      Shift:<input type="text" name="shift" id="shift" class="form-control bg-dark">
       Location:<input class="form-control bg-dark " type="text" name="address" id="address" placeholder="Enter location" required>
       Website:<input class="form-control bg-dark " type="url" name="website" id="website" placeholder="Enter website link" required>
       Logo: <br>

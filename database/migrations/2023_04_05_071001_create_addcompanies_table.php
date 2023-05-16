@@ -20,7 +20,9 @@ return new class extends Migration
             $table->mediumText('image')->nullable();
             $table->string('address');
             $table->longText('discription');
-            $table->string('salary');
+            $table->string('shift');
+            $table->string('result');
+            $table->string('salary')->nullable();
             $table->bigInteger('contact');
             $table->string('website');
             $table->string('email');
